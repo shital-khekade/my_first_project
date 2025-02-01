@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and JavaScript Connectivity</title>
+</head>
+<body>
+    <h1>HTML and JavaScript Example</h1>
+    <form id="myForm">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="button" onclick="displayMessage()">Submit</button>
+    </form>
+    <p id="output"></p>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+// Function to handle form submission
+function displayMessage() {
+    // Get the value of the input field
+    const name = document.getElementById('name').value;
+
+    // Check if the input is empty
+    if (name.trim() === '') {
+        alert('Please enter your name!');
+        return;
+    }
+
+    // Display the name in the output paragraph
+    document.getElementById('output').textContent = Hello, ${name}! Welcome to JavaScript connectivity.;
+}
+
+
+
+Code Explanation:
+
+1. HTML Form:
+
+Ek form hai jisme ek input field aur ek button diya gaya hai.
+
+Button ka onclick attribute JavaScript function displayMessage() ko call karta hai.
+
+
+
+2. JavaScript:
+
+JavaScript ka function displayMessage() input field se value fetch karta hai.
+
+Agar input khali hai, to ek alert message dikhata hai.
+
+Agar input diya gaya hai, to woh value HTML ke paragraph tag (<p id="output">) mein dikhata hai.
+
+
+
+
+
+
+Output:
+
+1. Page load hone par ek form dikhai dega.
+
+
+2. Jab user apna naam dal kar "Submit" button click karega, to input value paragraph ke andar dikhayi degi, jaise:
+
+Hello, Shital! Welcome to JavaScript connectivity.
+
+
+
